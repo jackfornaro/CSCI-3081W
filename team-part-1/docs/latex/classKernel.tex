@@ -1,0 +1,106 @@
+\hypertarget{classKernel}{}\doxysection{Kernel Class Reference}
+\label{classKernel}\index{Kernel@{Kernel}}
+
+
+The main class for the generation of kernel for different filters.  
+
+
+
+
+{\ttfamily \#include $<$kernel.\+h$>$}
+
+
+
+Collaboration diagram for Kernel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classKernel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKernel_a84dba549c0823454ecfc8089c20cf812}\label{classKernel_a84dba549c0823454ecfc8089c20cf812}} 
+\mbox{\hyperlink{classKernel_a84dba549c0823454ecfc8089c20cf812}{Kernel}} ()
+\begin{DoxyCompactList}\small\item\em The deafult constructor, set the kernel size to 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKernel_a561605a30b02ef0f6527411ba35e2525}\label{classKernel_a561605a30b02ef0f6527411ba35e2525}} 
+\mbox{\hyperlink{classKernel_a561605a30b02ef0f6527411ba35e2525}{Kernel}} (int ksize)
+\begin{DoxyCompactList}\small\item\em The constructor, set the kernel size to the input int parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKernel_a9c7407e3a0b1cb9b2f96e9a030187064}\label{classKernel_a9c7407e3a0b1cb9b2f96e9a030187064}} 
+\mbox{\hyperlink{classKernel_a9c7407e3a0b1cb9b2f96e9a030187064}{$\sim$\+Kernel}} ()
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKernel_a82c66f7c3d498d40dbab93e81fd94402}\label{classKernel_a82c66f7c3d498d40dbab93e81fd94402}} 
+void \mbox{\hyperlink{classKernel_a82c66f7c3d498d40dbab93e81fd94402}{operator=}} (const \mbox{\hyperlink{classKernel}{Kernel}} \&kernel)
+\begin{DoxyCompactList}\small\item\em The overloaded equal operator that is used to set the \mbox{\hyperlink{classKernel}{Kernel}} object to the input kernel object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKernel_ae6125e8956d1246770f504ac4599dbea}\label{classKernel_ae6125e8956d1246770f504ac4599dbea}} 
+\mbox{\hyperlink{classKernel}{Kernel}} \mbox{\hyperlink{classKernel_ae6125e8956d1246770f504ac4599dbea}{operator/}} (float num)
+\begin{DoxyCompactList}\small\item\em The overloaded division operator that is used to divide the \mbox{\hyperlink{classKernel}{Kernel}} object to the input float number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKernel_a80d5afb7f9dd247ca0d9b3bc1f27fcf5}\label{classKernel_a80d5afb7f9dd247ca0d9b3bc1f27fcf5}} 
+void \mbox{\hyperlink{classKernel_a80d5afb7f9dd247ca0d9b3bc1f27fcf5}{Gaussian\+Kernel}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to initialize the gasussian kernel vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classKernel_a6b6ab12f164a6a7e9108e2643a86169d}\label{classKernel_a6b6ab12f164a6a7e9108e2643a86169d}} 
+void \mbox{\hyperlink{classKernel_a6b6ab12f164a6a7e9108e2643a86169d}{Sobel\+Kernel}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to initialize the sobel kernel vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKernel_aeb449f261296ce534a2045beb9b0aeaf}{Get\+K\+Size}} ()
+\begin{DoxyCompactList}\small\item\em To get the size of the kernel object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKernel_a64e6140dbd5e724815cf1a2baeda65a1}{Set\+K\+Size}} (int size)
+\begin{DoxyCompactList}\small\item\em Set the size of the kernel object by the input size parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classKernel_ab35704da26079fe4eaa6008323a359c0}\label{classKernel_ab35704da26079fe4eaa6008323a359c0}} 
+float {\bfseries sigma}
+\item 
+\mbox{\Hypertarget{classKernel_a832b6e692693f40706aece08ab9ca385}\label{classKernel_a832b6e692693f40706aece08ab9ca385}} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries gaussian\+\_\+kernel}
+\item 
+\mbox{\Hypertarget{classKernel_a6de65da4e43b2b2922868b623387b324}\label{classKernel_a6de65da4e43b2b2922868b623387b324}} 
+float {\bfseries G}
+\item 
+\mbox{\Hypertarget{classKernel_a86a3a1c10d6e30c22a07b09425bd0f03}\label{classKernel_a86a3a1c10d6e30c22a07b09425bd0f03}} 
+float {\bfseries theta}
+\item 
+\mbox{\Hypertarget{classKernel_af03189473be93c03c371a6ffd70950aa}\label{classKernel_af03189473be93c03c371a6ffd70950aa}} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries sobel\+\_\+kx\+\_\+kernel}
+\item 
+\mbox{\Hypertarget{classKernel_add9b790923aec43c0f14d30b572027dc}\label{classKernel_add9b790923aec43c0f14d30b572027dc}} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries sobel\+\_\+ky\+\_\+kernel}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the generation of kernel for different filters. 
+
+@kernel.h Calls to This is the base class that is used to generate kernel. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKernel_aeb449f261296ce534a2045beb9b0aeaf}\label{classKernel_aeb449f261296ce534a2045beb9b0aeaf}} 
+\index{Kernel@{Kernel}!GetKSize@{GetKSize}}
+\index{GetKSize@{GetKSize}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{GetKSize()}{GetKSize()}}
+{\footnotesize\ttfamily int Kernel\+::\+Get\+K\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To get the size of the kernel object. 
+
+\begin{DoxyReturn}{Returns}
+the int size of the kernel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classKernel_a64e6140dbd5e724815cf1a2baeda65a1}\label{classKernel_a64e6140dbd5e724815cf1a2baeda65a1}} 
+\index{Kernel@{Kernel}!SetKSize@{SetKSize}}
+\index{SetKSize@{SetKSize}!Kernel@{Kernel}}
+\doxysubsubsection{\texorpdfstring{SetKSize()}{SetKSize()}}
+{\footnotesize\ttfamily void Kernel\+::\+Set\+K\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Set the size of the kernel object by the input size parameter. 
+
+@kernel.cc 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/c/\+Users/\+Haining Lan/\+Desktop/3081w/repo-\/team-\/8/project/kernel.\+h\item 
+/mnt/c/\+Users/\+Haining Lan/\+Desktop/3081w/repo-\/team-\/8/project/kernel.\+cc\end{DoxyCompactItemize}

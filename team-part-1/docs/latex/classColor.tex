@@ -1,0 +1,172 @@
+\hypertarget{classColor}{}\doxysection{Color Class Reference}
+\label{classColor}\index{Color@{Color}}
+
+
+The class is used to set the unsigned char$\ast$ pixel to a color object that contains values of float red, green, blue, and alpha.  
+
+
+
+
+{\ttfamily \#include $<$color.\+h$>$}
+
+
+
+Collaboration diagram for Color\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classColor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classColor_a9a742cbe9f9f4037f5d9f4e81a9b2428}\label{classColor_a9a742cbe9f9f4037f5d9f4e81a9b2428}} 
+\mbox{\hyperlink{classColor_a9a742cbe9f9f4037f5d9f4e81a9b2428}{Color}} ()
+\begin{DoxyCompactList}\small\item\em The default Constructor will initialize the object to the deafult R\+G\+BA values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classColor_ac18ac1dbee9c4138544d1dc61cc3caea}\label{classColor_ac18ac1dbee9c4138544d1dc61cc3caea}} 
+\mbox{\hyperlink{classColor_ac18ac1dbee9c4138544d1dc61cc3caea}{Color}} (float red, float green, float blue, float alpha)
+\begin{DoxyCompactList}\small\item\em Constructor that takes in the R\+G\+BA values and intilize the object to those values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classColor_a3cfce6c6821d3bf489e26074c55378c0}\label{classColor_a3cfce6c6821d3bf489e26074c55378c0}} 
+\mbox{\hyperlink{classColor_a3cfce6c6821d3bf489e26074c55378c0}{$\sim$\+Color}} ()
+\begin{DoxyCompactList}\small\item\em The deafult destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classColor}{Color}} \mbox{\hyperlink{classColor_a76d829819622c7da1f39adbc9fcc8785}{operator+}} (const \mbox{\hyperlink{classColor}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Below are a list of overloaded operators that allow us to take the \mbox{\hyperlink{classColor}{Color}} object and do common operations such as (+, -\/, $\ast$, /) to another \mbox{\hyperlink{classColor}{Color}} object or float number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classColor_a38b946804ed8e831c909ec2ac23dfc58}\label{classColor_a38b946804ed8e831c909ec2ac23dfc58}} 
+\mbox{\hyperlink{classColor}{Color}} {\bfseries operator+} (const float num)
+\item 
+\mbox{\Hypertarget{classColor_a81e6990064f809bf8d0cc63a5e3300c6}\label{classColor_a81e6990064f809bf8d0cc63a5e3300c6}} 
+\mbox{\hyperlink{classColor}{Color}} {\bfseries operator-\/} (const \mbox{\hyperlink{classColor}{Color}} \&color)
+\item 
+\mbox{\Hypertarget{classColor_abd8c55279f5b9442ee149c7d670f32ad}\label{classColor_abd8c55279f5b9442ee149c7d670f32ad}} 
+\mbox{\hyperlink{classColor}{Color}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{classColor}{Color}} \&color)
+\item 
+\mbox{\Hypertarget{classColor_a79cb9accab776d2e87e6502665289fac}\label{classColor_a79cb9accab776d2e87e6502665289fac}} 
+\mbox{\hyperlink{classColor}{Color}} {\bfseries operator$\ast$} (const float num)
+\item 
+\mbox{\Hypertarget{classColor_a94e1761a9c8a38a1cb8e7efe0ad8e09f}\label{classColor_a94e1761a9c8a38a1cb8e7efe0ad8e09f}} 
+\mbox{\hyperlink{classColor}{Color}} {\bfseries operator/} (const \mbox{\hyperlink{classColor}{Color}} \&color)
+\item 
+\mbox{\Hypertarget{classColor_aaba807e8c8e5a40a14b2ca44a65843fc}\label{classColor_aaba807e8c8e5a40a14b2ca44a65843fc}} 
+\mbox{\hyperlink{classColor}{Color}} {\bfseries operator/} (const float num)
+\item 
+\mbox{\Hypertarget{classColor_ac06dcf409ae64de5a67c7f6e69b6f44b}\label{classColor_ac06dcf409ae64de5a67c7f6e69b6f44b}} 
+void \mbox{\hyperlink{classColor_ac06dcf409ae64de5a67c7f6e69b6f44b}{operator=}} (const \mbox{\hyperlink{classColor}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em The overloaded equal operator that will set the \mbox{\hyperlink{classColor}{Color}} object values to another \mbox{\hyperlink{classColor}{Color}} object values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classColor_acb382a60ed7a035e4135dd2e3c1af5d2}\label{classColor_acb382a60ed7a035e4135dd2e3c1af5d2}} 
+void {\bfseries operator=} (const float num)
+\item 
+float \mbox{\hyperlink{classColor_a44b18556e2cc4cd58e3f5f35471262b5}{Get\+Luminance}} ()
+\begin{DoxyCompactList}\small\item\em Calling this method will give us the luminance value of the current pixel. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classColor_a93b67e3915758afd0398f4988f0d3019}{Get\+Red}} ()
+\begin{DoxyCompactList}\small\item\em Calling this method will give us the red value of the current pixel. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classColor_aeb4a838fcb06180198113fde13b29209}{Get\+Green}} ()
+\begin{DoxyCompactList}\small\item\em Calling this method will give us the green value of the current pixel. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classColor_a65a514c6899c68b35510bf1f87cd998e}{Get\+Blue}} ()
+\begin{DoxyCompactList}\small\item\em Calling this method will give us the blue value of the current pixel. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classColor_a568134c6b32b9425315a63bc176c6387}{Get\+Alpha}} ()
+\begin{DoxyCompactList}\small\item\em Calling this method will give us the alpha value of the current pixel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classColor_ad8748f44820e3926eeda035d5d56e1c4}\label{classColor_ad8748f44820e3926eeda035d5d56e1c4}} 
+void \mbox{\hyperlink{classColor_ad8748f44820e3926eeda035d5d56e1c4}{Set\+Red}} (float num)
+\begin{DoxyCompactList}\small\item\em Set the current \mbox{\hyperlink{classColor}{Color}} object instance red variable to the float number in the argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classColor_a7fe51ae58ec51e7e524fe831cb48caf2}\label{classColor_a7fe51ae58ec51e7e524fe831cb48caf2}} 
+void \mbox{\hyperlink{classColor_a7fe51ae58ec51e7e524fe831cb48caf2}{Set\+Green}} (float num)
+\begin{DoxyCompactList}\small\item\em Set the current \mbox{\hyperlink{classColor}{Color}} object instance green variable to the float number in the argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classColor_aae1749d381470ef7e4262b4355698cfd}\label{classColor_aae1749d381470ef7e4262b4355698cfd}} 
+void \mbox{\hyperlink{classColor_aae1749d381470ef7e4262b4355698cfd}{Set\+Blue}} (float num)
+\begin{DoxyCompactList}\small\item\em Set the current \mbox{\hyperlink{classColor}{Color}} object instance blue variable to the float number in the argument. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classColor_aa75bac8c68dd6f93d212b2e7d0ce9c38}\label{classColor_aa75bac8c68dd6f93d212b2e7d0ce9c38}} 
+void \mbox{\hyperlink{classColor_aa75bac8c68dd6f93d212b2e7d0ce9c38}{Set\+Alpha}} (float num)
+\begin{DoxyCompactList}\small\item\em Set the current \mbox{\hyperlink{classColor}{Color}} object instance alpha variable to the float number in the argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class is used to set the unsigned char$\ast$ pixel to a color object that contains values of float red, green, blue, and alpha. 
+
+Calls to This is the class that is used to store the color values for the pixels. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classColor_a568134c6b32b9425315a63bc176c6387}\label{classColor_a568134c6b32b9425315a63bc176c6387}} 
+\index{Color@{Color}!GetAlpha@{GetAlpha}}
+\index{GetAlpha@{GetAlpha}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{GetAlpha()}{GetAlpha()}}
+{\footnotesize\ttfamily float Color\+::\+Get\+Alpha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calling this method will give us the alpha value of the current pixel. 
+
+\begin{DoxyReturn}{Returns}
+Return the float value of the alpha value at the current pixel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a65a514c6899c68b35510bf1f87cd998e}\label{classColor_a65a514c6899c68b35510bf1f87cd998e}} 
+\index{Color@{Color}!GetBlue@{GetBlue}}
+\index{GetBlue@{GetBlue}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{GetBlue()}{GetBlue()}}
+{\footnotesize\ttfamily float Color\+::\+Get\+Blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calling this method will give us the blue value of the current pixel. 
+
+\begin{DoxyReturn}{Returns}
+Return the float value of the blue value at the current pixel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_aeb4a838fcb06180198113fde13b29209}\label{classColor_aeb4a838fcb06180198113fde13b29209}} 
+\index{Color@{Color}!GetGreen@{GetGreen}}
+\index{GetGreen@{GetGreen}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{GetGreen()}{GetGreen()}}
+{\footnotesize\ttfamily float Color\+::\+Get\+Green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calling this method will give us the green value of the current pixel. 
+
+\begin{DoxyReturn}{Returns}
+Return the float value of the green value at the current pixel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a44b18556e2cc4cd58e3f5f35471262b5}\label{classColor_a44b18556e2cc4cd58e3f5f35471262b5}} 
+\index{Color@{Color}!GetLuminance@{GetLuminance}}
+\index{GetLuminance@{GetLuminance}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{GetLuminance()}{GetLuminance()}}
+{\footnotesize\ttfamily float Color\+::\+Get\+Luminance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calling this method will give us the luminance value of the current pixel. 
+
+\begin{DoxyReturn}{Returns}
+Return the float value of the luminance value at the current pixel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a93b67e3915758afd0398f4988f0d3019}\label{classColor_a93b67e3915758afd0398f4988f0d3019}} 
+\index{Color@{Color}!GetRed@{GetRed}}
+\index{GetRed@{GetRed}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{GetRed()}{GetRed()}}
+{\footnotesize\ttfamily float Color\+::\+Get\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calling this method will give us the red value of the current pixel. 
+
+\begin{DoxyReturn}{Returns}
+Return the float value of the red value at the current pixel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classColor_a76d829819622c7da1f39adbc9fcc8785}\label{classColor_a76d829819622c7da1f39adbc9fcc8785}} 
+\index{Color@{Color}!operator+@{operator+}}
+\index{operator+@{operator+}!Color@{Color}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classColor}{Color}} Color\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classColor}{Color}} \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Below are a list of overloaded operators that allow us to take the \mbox{\hyperlink{classColor}{Color}} object and do common operations such as (+, -\/, $\ast$, /) to another \mbox{\hyperlink{classColor}{Color}} object or float number. 
+
+\begin{DoxyReturn}{Returns}
+Return the result of of the opertion to a \mbox{\hyperlink{classColor}{Color}} object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/c/\+Users/\+Haining Lan/\+Desktop/3081w/repo-\/team-\/8/project/color.\+h\item 
+/mnt/c/\+Users/\+Haining Lan/\+Desktop/3081w/repo-\/team-\/8/project/color.\+cc\end{DoxyCompactItemize}

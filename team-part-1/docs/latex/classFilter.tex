@@ -1,0 +1,61 @@
+\hypertarget{classFilter}{}\doxysection{Filter Class Reference}
+\label{classFilter}\index{Filter@{Filter}}
+
+
+The main class for the generation of \mbox{\hyperlink{classFilter}{Filter}}.  
+
+
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+
+
+Inheritance diagram for Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFilter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Filter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classFilter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classFilter_adc7fcdebb84962916adba9ee89d02add}{Apply}} (std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} $\ast$ $>$ \&original, std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} $\ast$ $>$ \&filtered)=0
+\begin{DoxyCompactList}\small\item\em Apply the filter, takes in the $<$\mbox{\hyperlink{classImage}{Image}} $\ast$$>$ original vector and output to $<$\mbox{\hyperlink{classImage}{Image}} $\ast$$>$ filtered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the generation of \mbox{\hyperlink{classFilter}{Filter}}. 
+
+Calls to This is the base class that is used to generate any filter. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilter_adc7fcdebb84962916adba9ee89d02add}\label{classFilter_adc7fcdebb84962916adba9ee89d02add}} 
+\index{Filter@{Filter}!Apply@{Apply}}
+\index{Apply@{Apply}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{Apply()}{Apply()}}
+{\footnotesize\ttfamily virtual void Filter\+::\+Apply (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} $\ast$ $>$ \&}]{original,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classImage}{Image}} $\ast$ $>$ \&}]{filtered }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Apply the filter, takes in the $<$\mbox{\hyperlink{classImage}{Image}} $\ast$$>$ original vector and output to $<$\mbox{\hyperlink{classImage}{Image}} $\ast$$>$ filtered. 
+
+
+
+Implemented in \mbox{\hyperlink{classPixelateFilter_a2de943eb346b3df7347cef751120754a}{Pixelate\+Filter}}, \mbox{\hyperlink{classDoubleThreshold_a798b74c80e1593f6f649bd3e87dc1a8e}{Double\+Threshold}}, \mbox{\hyperlink{classHysteresis_a5627afc211304f55b28f518bd50d496b}{Hysteresis}}, \mbox{\hyperlink{classRemoveLightPixels_a33b44ee3853ab9839d20540ba6b01c5c}{Remove\+Light\+Pixels}}, \mbox{\hyperlink{classSobelFilter_a01a02452d104f7dfdf7f741dead14cae}{Sobel\+Filter}}, \mbox{\hyperlink{classGreyScaleFilter_a39d345a15db9dedbe7cb66f631e97a30}{Grey\+Scale\+Filter}}, \mbox{\hyperlink{classNonMaxSup_adde6feb32dbe026d8136667929b54eb6}{Non\+Max\+Sup}}, \mbox{\hyperlink{classCannyEdgeDetectFilter_acaf7df31920f255fddb12225374db81b}{Canny\+Edge\+Detect\+Filter}}, \mbox{\hyperlink{classGaussianBlurFilter_abe6b1d76c9dec51e3bacd523a1926b2a}{Gaussian\+Blur\+Filter}}, \mbox{\hyperlink{classThresholdFilter_affd9b78dc44b5c90d03460b4d680211b}{Threshold\+Filter}}, and \mbox{\hyperlink{classMeanBlurFilter_a5e8dbf638a337a396f81a805a3510f77}{Mean\+Blur\+Filter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/c/\+Users/\+Haining Lan/\+Desktop/3081w/repo-\/team-\/8/project/filter.\+h\end{DoxyCompactItemize}

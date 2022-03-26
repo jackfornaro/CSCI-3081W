@@ -1,0 +1,151 @@
+\hypertarget{classImage}{}\doxysection{Image Class Reference}
+\label{classImage}\index{Image@{Image}}
+
+
+The main class for the generation of \mbox{\hyperlink{classImage}{Image}}.  
+
+
+
+
+{\ttfamily \#include $<$image.\+h$>$}
+
+
+
+Collaboration diagram for Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classImage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classImage_aead6979be0d2fac6a3732bf46ed5c0d1}\label{classImage_aead6979be0d2fac6a3732bf46ed5c0d1}} 
+\mbox{\hyperlink{classImage_aead6979be0d2fac6a3732bf46ed5c0d1}{Image}} (int width, int height, int components)
+\begin{DoxyCompactList}\small\item\em Constructor that takes in the width, height, and components to construct an image object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classImage_aa8e24076856345d4e10b72b765a7a229}\label{classImage_aa8e24076856345d4e10b72b765a7a229}} 
+\mbox{\hyperlink{classImage_aa8e24076856345d4e10b72b765a7a229}{Image}} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Constructor that takes in the filename of a png image and initialize the instance image variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classImage_a34410a36b132ab597a8878d45facc89a}\label{classImage_a34410a36b132ab597a8878d45facc89a}} 
+\mbox{\hyperlink{classImage_a34410a36b132ab597a8878d45facc89a}{Image}} (const \mbox{\hyperlink{classImage}{Image}} \&image)
+\begin{DoxyCompactList}\small\item\em Copy constructor takes in another image object as argument to create an identical image object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classImage_ae6b1cdd82584ce9fb729c1e062ee088b}\label{classImage_ae6b1cdd82584ce9fb729c1e062ee088b}} 
+void \mbox{\hyperlink{classImage_ae6b1cdd82584ce9fb729c1e062ee088b}{operator=}} (const \mbox{\hyperlink{classImage}{Image}} \&image)
+\begin{DoxyCompactList}\small\item\em Equal overloaded operator is used to set an image object equal to the input image object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classImage_af9c94e45bcd771e1e17934de3c38449b}\label{classImage_af9c94e45bcd771e1e17934de3c38449b}} 
+void \mbox{\hyperlink{classImage_af9c94e45bcd771e1e17934de3c38449b}{Save\+As}} (const std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Save\+As takes in a filename and save the file as \char`\"{}filename.\+png\char`\"{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_a4d6de643ee334ff52c85da9a62d9297d}{Get\+Height}} ()
+\begin{DoxyCompactList}\small\item\em To get the height of the image object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_a4ab80d76fd124fd9de9b4fca8ae16186}{Get\+Width}} ()
+\begin{DoxyCompactList}\small\item\em To get the width of the image object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classImage_a04e02c5aa54d26422bbaa777b08de4c9}{Get\+Component\+Num}} ()
+\begin{DoxyCompactList}\small\item\em To get the compoenent value of the image object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classColor}{Color}} \mbox{\hyperlink{classImage_a7a154d7a3ed58baaeb73e1fdf9017afb}{Get\+Pixel}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em To get the \mbox{\hyperlink{classColor}{Color}} object of the image object, the color object consist the values of float red, green, blue and alpha. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classImage_a2f598e2f10bfa9898d7fc8d79f83e40f}{Get\+Pixel\+Float}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em The method will cast the 4 bytes unsigned char$\ast$ at location of the x and y pixel to 4 bytes float and return it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_ace17dc216aa2ba2c4b546383ea4b482c}{Set\+Pixel}} (int x, int y, \mbox{\hyperlink{classColor}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Set the location of the x and y pixel of the image to the color object that consist the values of float red, green, blue and alpha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_a08bc9291334ecef2930f93058777ddbc}{Set\+Pixel\+Float}} (int x, int y, float value)
+\begin{DoxyCompactList}\small\item\em Set the location of the x and y pixel of the image to the provided float value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the generation of \mbox{\hyperlink{classImage}{Image}}. 
+
+Calls to This is the base class to create any image objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classImage_a04e02c5aa54d26422bbaa777b08de4c9}\label{classImage_a04e02c5aa54d26422bbaa777b08de4c9}} 
+\index{Image@{Image}!GetComponentNum@{GetComponentNum}}
+\index{GetComponentNum@{GetComponentNum}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{GetComponentNum()}{GetComponentNum()}}
+{\footnotesize\ttfamily int Image\+::\+Get\+Component\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To get the compoenent value of the image object. 
+
+\begin{DoxyReturn}{Returns}
+the components of the image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a4d6de643ee334ff52c85da9a62d9297d}\label{classImage_a4d6de643ee334ff52c85da9a62d9297d}} 
+\index{Image@{Image}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily int Image\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To get the height of the image object. 
+
+\begin{DoxyReturn}{Returns}
+the height of the image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a7a154d7a3ed58baaeb73e1fdf9017afb}\label{classImage_a7a154d7a3ed58baaeb73e1fdf9017afb}} 
+\index{Image@{Image}!GetPixel@{GetPixel}}
+\index{GetPixel@{GetPixel}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{GetPixel()}{GetPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classColor}{Color}} Image\+::\+Get\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+To get the \mbox{\hyperlink{classColor}{Color}} object of the image object, the color object consist the values of float red, green, blue and alpha. 
+
+\begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{classColor}{Color}} object of the pixel at the provided x and y location. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a2f598e2f10bfa9898d7fc8d79f83e40f}\label{classImage_a2f598e2f10bfa9898d7fc8d79f83e40f}} 
+\index{Image@{Image}!GetPixelFloat@{GetPixelFloat}}
+\index{GetPixelFloat@{GetPixelFloat}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{GetPixelFloat()}{GetPixelFloat()}}
+{\footnotesize\ttfamily float Image\+::\+Get\+Pixel\+Float (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+
+
+The method will cast the 4 bytes unsigned char$\ast$ at location of the x and y pixel to 4 bytes float and return it. 
+
+\begin{DoxyReturn}{Returns}
+the float of the pixel at the provided x and y location. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a4ab80d76fd124fd9de9b4fca8ae16186}\label{classImage_a4ab80d76fd124fd9de9b4fca8ae16186}} 
+\index{Image@{Image}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily int Image\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To get the width of the image object. 
+
+\begin{DoxyReturn}{Returns}
+the width of the image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_ace17dc216aa2ba2c4b546383ea4b482c}\label{classImage_ace17dc216aa2ba2c4b546383ea4b482c}} 
+\index{Image@{Image}!SetPixel@{SetPixel}}
+\index{SetPixel@{SetPixel}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{SetPixel()}{SetPixel()}}
+{\footnotesize\ttfamily void Image\+::\+Set\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{classColor}{Color}}}]{color }\end{DoxyParamCaption})}
+
+
+
+Set the location of the x and y pixel of the image to the color object that consist the values of float red, green, blue and alpha. 
+
+\mbox{\Hypertarget{classImage_a08bc9291334ecef2930f93058777ddbc}\label{classImage_a08bc9291334ecef2930f93058777ddbc}} 
+\index{Image@{Image}!SetPixelFloat@{SetPixelFloat}}
+\index{SetPixelFloat@{SetPixelFloat}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{SetPixelFloat()}{SetPixelFloat()}}
+{\footnotesize\ttfamily void Image\+::\+Set\+Pixel\+Float (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the location of the x and y pixel of the image to the provided float value. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/c/\+Users/\+Haining Lan/\+Desktop/3081w/repo-\/team-\/8/project/image.\+h\item 
+/mnt/c/\+Users/\+Haining Lan/\+Desktop/3081w/repo-\/team-\/8/project/image.\+cc\end{DoxyCompactItemize}

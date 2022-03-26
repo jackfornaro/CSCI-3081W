@@ -1,0 +1,71 @@
+\hypertarget{index_intro_sec}{}\doxysection{Introduction}\label{index_intro_sec}
+
+\begin{DoxyEnumerate}
+\item A brief description of the project.(Liyuan Zheng) ~\newline
+~\newline
+ We developed the Canny Edge algorithm as a team together, utilizing polymorphism and inheritance methods on our filter class. The base filter class can be act as the foundation class to generate different filters such as \char`\"{}\+Greyscale filter, Gaussian Blur filter, Sobel filter, Non Max filter, Double Threshold filter, and Hysteresis filter\char`\"{} that can be apply to an input image, thus we can produce our edge detection using these filters.
+
+From the original project, the work of building the framework was separated into separate issues/features, and the use of Github, such as repository setup, using branches and pull requests, follow process as a team.
+
+For Canny edge detection, we implemented Greyscale, Gaussian blur, Sobel filter, Non-\/max suppression, Double threshold, \mbox{\hyperlink{classHysteresis}{Hysteresis}}, Pixelate, Remove Light filter and combined all these filters into a canny edge filter.
+
+Finally, Documented and built all classes and methods by using Doxygen the Doxygen mainpage design for the project.
+\item How to build and run the project. (Jack Fornaro)~\newline
+~\newline
+ To start, change directories into the~\newline
+ repo-\/team-\/8/project directory by using the command\+:~\newline
+~\newline
+ cd repo-\/team-\/8/project~\newline
+~\newline
+ Then, run\+:~\newline
+~\newline
+ clear; make clean; make;~\newline
+~\newline
+ to clear the screen, clean the current make of the program and recompile the Makefile. Now that the image\+\_\+processor is up to date with the current make, we can run the program with the following command\+:~\newline
+~\newline
+ ./image\+\_\+processor $<$input\+Path$>$ $<$filter\+Type$>$ $<$output\+Path$>$~\newline
+~\newline
+ which, if using our data file and canny\+\_\+edge\+:~\newline
+~\newline
+ ./image\+\_\+processor data/statue.\+png canny\+\_\+edge data/statuecanny.\+png~\newline
+~\newline
+ The output file should appear in the project/data folder, with the name given in the last parameter. The \mbox{\hyperlink{classImage}{Image}} will have the canny\+\_\+edge filter applied to it.~\newline
+~\newline
+
+\item Overview of the main classes (Liang Zhang)\+:~\newline
+~\newline
+ \mbox{\hyperlink{main_8cc}{main.\+cc}}\+: This class is used during program startup and we take in the input arguments in the command lines to determine which filter we would like to use in our program, the location of the input image, and the output of the image. Then \mbox{\hyperlink{main_8cc}{main.\+cc}} will call the apply the filter onto the output image and save it.~\newline
+ \mbox{\hyperlink{color_8h_source}{color.\+h}} \& color.\+cc class\+: This class is used for representation of the image pixel.~\newline
+ \mbox{\hyperlink{filter_8h_source}{filter.\+h}} class\+: This class is the base class for all the filters.~\newline
+ \mbox{\hyperlink{image_8h_source}{image.\+h}} \& image.\+cc class\+: This class is used to initialize the image, copy the image, and storing the image.~\newline
+ \mbox{\hyperlink{kernel_8h_source}{kernel.\+h}} \& kernel.\+cc class\+: This class is used for initialize for the kernel for different filters.~\newline
+ \mbox{\hyperlink{greyscale__filter_8h_source}{greyscale\+\_\+filter.\+h}} \& greyscale\+\_\+filter.\+cc class\+: This class is inherited from the filter class, and it is used for applying the greyscale filter to the output image.~\newline
+ \mbox{\hyperlink{gaussian__blur__filter_8h_source}{gaussian\+\_\+blur\+\_\+filter.\+h}} \& gaussian\+\_\+blur\+\_\+filter.\+cc class\+: This class is inherited from the filter class, and it is used for applying the gaussian blur filter to the output image.~\newline
+ \mbox{\hyperlink{non__max__suppression_8h_source}{non\+\_\+max\+\_\+suppression.\+h}} \& \mbox{\hyperlink{non__max__suppression_8cc}{non\+\_\+max\+\_\+suppression.\+cc}} class\+: This class is inherited from the filter class, and it is used for applying the non max suppression filter to the output image.~\newline
+ \mbox{\hyperlink{double__threshold_8h_source}{double\+\_\+threshold.\+h}} \& \mbox{\hyperlink{double__threshold_8cc}{double\+\_\+threshold.\+cc}} class\+: This class is inherited from the filter class, and it is used for applying the double threshold filter to the output image.~\newline
+ \mbox{\hyperlink{hysteresis_8h_source}{hysteresis.\+h}} hysteresis.\+cc class\+: This class is inherited from the filter class, and it is used for applying the hysteresis filter to the output image.~\newline
+ \mbox{\hyperlink{canny__edge__detect_8h_source}{canny\+\_\+edge\+\_\+detect.\+h}} \& canny\+\_\+edge\+\_\+detect.\+cc class\+: This class is inherited from the filter class, and it is used for applying the canny edge detection to the output image.~\newline
+~\newline
+ Extra filters\+:~\newline
+ \mbox{\hyperlink{remove__light__pixels_8h_source}{remove\+\_\+light\+\_\+pixels.\+h}} \& remove\+\_\+light\+\_\+pixels.\+cc light pixel class\+: This class is inherited from the filter class, and it is used for removing the light pixel to the output image.~\newline
+ pixelation.\+h \& pixelation.\+cc class\+: This class is inherited from the filter class, and it is used for applying pixelation to the output image.~\newline
+~\newline
+
+\item How to start extending the system (Jack Fornaro)~\newline
+~\newline
+ If you would like to add a new filter, you must first create a header and implementation file for that filter. In example\+:~\newline
+ new\+\_\+filt.\+h \& new\+\_\+filt.\+cc.~\newline
+~\newline
+ In the header file, you must include \char`\"{}filter.\+h\char`\"{} to inherit the abstract class filter. Next, ensure the class declaration extends from the \mbox{\hyperlink{classFilter}{Filter}} class. The class delcation should be a name similar to the filter name. In this example, we will call the class New\+Example\+Filter. Since the Apply($<$\+Image$\ast$$>$ orig, $<$\+Image$\ast$$>$ filt) method is pure virtual in \mbox{\hyperlink{filter_8h_source}{filter.\+h}}, it must be declared here.~\newline
+ In the implementation file, you must include \char`\"{}new\+\_\+filt.\+h\char`\"{}. Next, you must implement the functions declared in \char`\"{}new\+\_\+filt.\+h\char`\"{}.~\newline
+ Once this is done, the filter itself must be added to \mbox{\hyperlink{main_8cc}{main.\+cc}}. This is done by including \char`\"{}new\+\_\+filt.\+h\char`\"{}, which includes the implemenation of new\+\_\+filt. Next, the filter must be added to the filter map with the following line of code\+:~\newline
+~\newline
+ filters\mbox{[}\char`\"{}new\+\_\+filt\char`\"{}\mbox{]} = unique\+\_\+ptr$<$\+Filter$>$(new New\+Example\+Filter());~\newline
+~\newline
+ Now the filter has been added to the system within the code. A U\+ML class for new\+\_\+filt will have to be created and added to the U\+ML Diagram. Additionally, to run the filter, perform the command\+:~\newline
+~\newline
+ ./image\+\_\+processor data/statue.\+png new\+\_\+filt data/statue\+New\+Filt~\newline
+~\newline
+ And the output file will be the image with the filter applied.~\newline
+
+\end{DoxyEnumerate}
