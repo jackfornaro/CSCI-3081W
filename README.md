@@ -1,2 +1,1 @@
-# CSCI-3081W
-Program Design &amp; Development
+# CSCI 3081W - Program Design & Development
